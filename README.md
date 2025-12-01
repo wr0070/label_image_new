@@ -80,8 +80,11 @@ pyinstaller --hidden-import=pyqt5 --hidden-import=lxml -F -n "labelImg" -c label
 
 打包完成后，会在 dist/ 目录看到生成的 labelImg.exe。
 
+<<<<<<< HEAD
 tips:
 1.如果发现下拉框中选项不正确或者缺少，请直接修改\data文件中的
 accident.txt（可能导致的事故类型）
 risk.txt（风险隐患类型）
 scene.txt（施工场景）
+=======
+>>>>>>> 9d828d4aaae2d4a3fc07ebdce19cd17e76e73c56
