@@ -3,6 +3,8 @@
 本项目基于 LabelImg，并对 `libs` 目录中的部分功能进行了修改与增强。
 如果已经安装过此软件，把环境中的labelimg-master或者labelimg文件夹更换成本文件夹中所有文件，再运行以下命令。
 
+本代码已经安装编译`resources.qrc`以及打包过`exe`文件，如需在不同笔记本上环境上进行重新编译，请删除`dist`文件夹和`resources.qrc`，重新按照以下方式在cmd中运行命令即可。
+
 ---
 
 ## 📦 使用说明（Windows）
@@ -24,6 +26,12 @@
 - **lxml**  
   http://lxml.de/installation.html
 
+```
+推荐下载python3.10以上版本
+以及
+pip install PyQt5 lxml
+```
+
 ---
 
 ## 2️⃣ 进入项目目录
@@ -43,28 +51,31 @@ pyrcc4 -o libs/resources.py resources.qrc
 🔹 如果使用 PyQt5（推荐）：
 pyrcc5 -o libs/resources.py resources.qrc
 
-⚠️ 注意：我没有上传编译好的 resources.qrc 文件，因此请自行确保该文件存在。
+⚠️ 注意：我已经上传编译好的 resources.qrc 文件，可以跳过pyrcc命令步骤。
 ```
 ---
 
 4️⃣ 运行程序
-
+```bash
 基本运行：
 python labelImg.py
 
 指定图片与预定义类别文件：
 python labelImg.py [IMAGE_PATH] [PRE-DEFINED CLASS FILE]
+```
 
 ---
 
 5️⃣（可选）打包为 EXE
 
 若需要打包为独立可执行文件：
-
+```bash
 安装 pyinstaller：
 pip install pyinstaller
 
 执行打包命令：
 pyinstaller --hidden-import=pyqt5 --hidden-import=lxml -F -n "labelImg" -c labelImg.py -p ./libs -p ./
+```
 
 打包完成后，会在 dist/ 目录看到生成的 labelImg.exe。
+
