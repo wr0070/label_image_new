@@ -4,7 +4,7 @@
 如果已经安装过此软件，把环境中的labelimg-master或者labelimg文件夹更换成本文件夹中所有文件，再运行以下命令。
 
 本代码已经安装编译`resources.qrc`以及打包过`exe`文件，如需在不同笔记本上环境上进行重新编译，请先下载 zip 文件或者用 git 拉取仓库，再删除`dist`文件夹和`resources.qrc`，重新按照以下方式在cmd中运行命令即可。
-
+钱
 
 ---
 
@@ -80,11 +80,8 @@ pyinstaller --hidden-import=pyqt5 --hidden-import=lxml -F -n "labelImg" -c label
 
 打包完成后，会在 dist/ 目录看到生成的 labelImg.exe。
 
-<<<<<<< HEAD
 tips:
 1.如果发现下拉框中选项不正确或者缺少，请直接修改\data文件中的
 accident.txt（可能导致的事故类型）
 risk.txt（风险隐患类型）
 scene.txt（施工场景）
-=======
->>>>>>> 9d828d4aaae2d4a3fc07ebdce19cd17e76e73c56
