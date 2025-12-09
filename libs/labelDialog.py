@@ -29,7 +29,7 @@ class LabelDialog(QDialog):
         if texts is None:
             texts = ["", "", ""]
 
-        self.labels = ["施工场景", "风险隐患类型", "可能导致的事故类型"]
+        self.labels = ["施工场景", "危险有害因素", "事故类型"]
 
         # 从 txt 文件中读取 options
         base_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
